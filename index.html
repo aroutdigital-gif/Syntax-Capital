@@ -1,7 +1,774 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07080b"><title>Syntax Opinion Capital — Decode the Market</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><header class="topbar"><a class="brand" href="#home"><img src="logo.jpg" alt="Syntax Opinion logo"><span><b>Syntax Opinion</b><small>Capital</small></span></a><nav><a href="#about">About</a><a href="#framework">Framework</a><a href="#testimonials">Testimonials</a><a href="#join">Join</a></nav></header><button class="menu-float" id="menuBtn" aria-label="Menu"><i></i><i></i><i></i></button><aside class="drawer" id="drawer"><div class="drawer-head"><span>MENU</span><button id="closeBtn">×</button></div><a href="#home">01 / Home</a><a href="#about">02 / About</a><a href="#framework">03 / Framework</a><a href="#testimonials">04 / Testimonials</a><a href="#join">05 / Join Syntax Opinion</a></aside><div class="backdrop" id="backdrop"></div><main>
-<section class="section hero" id="home"><div class="hero-grid"><div class="reveal"><p class="eyebrow"><span></span> TRADING COMMUNITY · EST. 2026</p><h1>Decode<br>the market.<br><em>Build<br>your edge.</em></h1><p class="lead">Syntax Opinion Capital adalah komunitas edukasi trading yang menggabungkan fundamental, technical, geopolitics, market structure, dan risk management untuk membantu trader membangun proses yang lebih terukur.</p><div class="actions"><a class="btn light" href="#join">Join Syntax Opinion ↗</a><a class="btn outline" href="#testimonials">Explore Proof ›</a></div><div class="hero-points"><div><b>01</b><span>Fundamental<br>First</span></div><div><b>02</b><span>Technical<br>Context</span></div><div><b>03</b><span>Risk<br>Discipline</span></div></div></div><div class="hero-visual reveal delay"><div class="orb"></div><div class="logo-card"><img src="logo.jpg" alt="Syntax Opinion Capital"><div class="scan"></div></div><div class="floating-label a">PROCESS<br>OVER PREDICTION</div><div class="floating-label b">FUNDAMENTAL<br>→ TECHNICAL</div></div></div></section>
-<section class="section" id="about"><div class="kicker reveal">01 / ABOUT</div><div class="split"><h2 class="reveal">From market<br>noise to market <em>clarity.</em></h2><div class="reveal delay"><p class="big">Kami membangun ruang belajar untuk trader yang ingin memahami <strong>kenapa</strong> harga bergerak, bukan sekadar mengejar ke mana harga bergerak.</p><div class="mini-grid"><article><b>01</b><h3>Process</h3><p>Alur analisis yang dapat diulang.</p></article><article><b>02</b><h3>Context</h3><p>Macro, geopolitics, dan price action.</p></article><article><b>03</b><h3>Discipline</h3><p>Risk management dalam keputusan.</p></article></div></div></div></section>
-<section class="section" id="framework"><div class="kicker reveal">02 / FRAMEWORK</div><div class="framework-head reveal"><h2>One market.<br><em>Multiple lenses.</em></h2><p>Fundamental sebagai konteks utama, technical sebagai alat membaca struktur dan timing.</p></div><div class="framework-grid"><article class="framework-card reveal"><b>01</b><strong>◎</strong><h3>Fundamental</h3><p>Macro data, central bank, liquidity, rates, USD, dan geopolitics.</p></article><article class="framework-card reveal delay"><b>02</b><strong>⌁</strong><h3>Technical</h3><p>Market structure, price action, multi-timeframe, SNR/SND, dan SMC.</p></article><article class="framework-card reveal delay2"><b>03</b><strong>↗</strong><h3>Risk Discipline</h3><p>RR, position sizing, invalidation, dan eksekusi tanpa overtrade.</p></article></div></section>
-<section class="section proof-intro"><div class="kicker reveal">03 / COMMUNITY PROOF</div><div class="proof-banner reveal"><div><p class="eyebrow"><span></span> REAL DISCUSSION · REAL PROCESS</p><h2>Bukan sekadar call.<br><em>Bangun cara berpikir.</em></h2></div><img src="logo.jpg" alt="Syntax Opinion"></div></section>
-<section class="section testimonials" id="testimonials"><div class="kicker reveal">04 / TESTIMONIALS</div><div class="testimonials-head reveal"><h2>Inside the<br><em>community.</em></h2><p>Dokumentasi diskusi, outlook, analisis, dan hasil pembelajaran dari grup. Ditampilkan sebagai dokumentasi komunitas, bukan jaminan hasil trading.</p></div><div class="testimonial-grid" id="testimonialGrid"></div></section>
-<section class="section join" id="join"><div class="join-box reveal"><div><p class="eyebrow"><span></span> SYNTAX OPINION CAPITAL</p><h2>Build your edge.<br><em>Not your hype.</em></h2><p>Masuk ke komunitas dan pelajari proses analisis yang lebih terstruktur — fundamental, technical, geopolitics, dan risk management dalam satu framework.</p><a class="btn light large" href="#" onclick="return false;">Join Syntax Opinion ↗</a><small>Ganti link tombol dengan link grup/WhatsApp/Telegram Anda.</small></div><img class="join-logo" src="logo.jpg" alt="Syntax Opinion Capital"></div></section></main><a class="join-float" href="#join">JOIN SYNTAX OPINION <b>↗</b></a><div class="lightbox" id="lightbox"><button id="lightboxClose">×</button><img id="lightboxImg" alt=""></div><footer><span>SYNTAX OPINION CAPITAL</span><span>NO ERROR. ONLY TRUE CODE.</span><span>© 2026</span></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+  <meta name="theme-color" content="#07080b">
+
+  <title>Syntax Opinion Capital — Decode the Market</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOP NAVIGATION
+========================= -->
+
+<header class="topbar">
+
+  <a class="brand" href="#home">
+    <img src="logo.jpg" alt="Syntax Opinion logo">
+
+    <span>
+      <b>Syntax Opinion</b>
+      <small>Capital</small>
+    </span>
+  </a>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#framework">Framework</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#join">Join</a>
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     MOBILE MENU BUTTON
+========================= -->
+
+<button
+  class="menu-float"
+  id="menuBtn"
+  aria-label="Menu"
+  aria-expanded="false"
+>
+  <i></i>
+  <i></i>
+  <i></i>
+</button>
+
+
+<!-- =========================
+     MOBILE DRAWER
+========================= -->
+
+<aside class="drawer" id="drawer">
+
+  <div class="drawer-head">
+    <span>MENU</span>
+    <button id="closeBtn">×</button>
+  </div>
+
+  <a href="#home">01 / Home</a>
+  <a href="#about">02 / About</a>
+  <a href="#framework">03 / Framework</a>
+  <a href="#testimonials">04 / Testimonials</a>
+  <a href="#join">05 / Join Syntax Opinion</a>
+
+</aside>
+
+<div class="backdrop" id="backdrop"></div>
+
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="section hero" id="home">
+
+  <div class="hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <p class="eyebrow">
+        <span></span>
+        TRADING COMMUNITY · EST. 2026
+      </p>
+
+      <h1>
+        Decode<br>
+        the market.<br>
+        <em>
+          Build<br>
+          your edge.
+        </em>
+      </h1>
+
+      <p class="lead">
+        Syntax Opinion Capital adalah komunitas edukasi trading yang menggabungkan fundamental, technical, geopolitics, market structure, dan risk management untuk membantu trader membangun proses yang lebih terukur.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn light" href="#join">
+          Join Syntax Opinion ↗
+        </a>
+
+        <a class="btn outline" href="#testimonials">
+          Explore Proof ›
+        </a>
+
+      </div>
+
+      <div class="hero-points">
+
+        <div>
+          <b>01</b>
+          <span>
+            Fundamental<br>
+            First
+          </span>
+        </div>
+
+        <div>
+          <b>02</b>
+          <span>
+            Technical<br>
+            Context
+          </span>
+        </div>
+
+        <div>
+          <b>03</b>
+          <span>
+            Risk<br>
+            Discipline
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual reveal delay">
+
+      <div class="orb"></div>
+
+      <div class="logo-card">
+
+        <img
+          src="logo.jpg"
+          alt="Syntax Opinion Capital"
+        >
+
+        <div class="scan"></div>
+
+      </div>
+
+      <div class="floating-label a">
+        PROCESS<br>
+        OVER PREDICTION
+      </div>
+
+      <div class="floating-label b">
+        FUNDAMENTAL<br>
+        → TECHNICAL
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+  <div class="kicker reveal">
+    01 / ABOUT
+  </div>
+
+  <div class="split">
+
+    <h2 class="reveal">
+      From market<br>
+      noise to market
+      <em>clarity.</em>
+    </h2>
+
+    <div class="reveal delay">
+
+      <p class="big">
+        Kami membangun ruang belajar untuk trader yang ingin memahami <strong>kenapa</strong> harga bergerak, bukan sekadar mengejar ke mana harga bergerak.
+      </p>
+
+      <div class="mini-grid">
+
+        <article>
+          <b>01</b>
+          <h3>Process</h3>
+          <p>
+            Alur analisis yang dapat diulang.
+          </p>
+        </article>
+
+        <article>
+          <b>02</b>
+          <h3>Context</h3>
+          <p>
+            Macro, geopolitics, dan price action.
+          </p>
+        </article>
+
+        <article>
+          <b>03</b>
+          <h3>Discipline</h3>
+          <p>
+            Risk management dalam keputusan.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FRAMEWORK
+========================= -->
+
+<section class="section" id="framework">
+
+  <div class="kicker reveal">
+    02 / FRAMEWORK
+  </div>
+
+  <div class="framework-head reveal">
+
+    <h2>
+      One market.<br>
+      <em>Multiple lenses.</em>
+    </h2>
+
+    <p>
+      Fundamental sebagai konteks utama, technical sebagai alat membaca struktur dan timing.
+    </p>
+
+  </div>
+
+
+  <div class="framework-grid">
+
+    <article class="framework-card reveal">
+
+      <b>01</b>
+
+      <strong>◎</strong>
+
+      <h3>Fundamental</h3>
+
+      <p>
+        Macro data, central bank, liquidity, rates, USD, dan geopolitics.
+      </p>
+
+    </article>
+
+
+    <article class="framework-card reveal delay">
+
+      <b>02</b>
+
+      <strong>⌁</strong>
+
+      <h3>Technical</h3>
+
+      <p>
+        Market structure, price action, multi-timeframe, SNR/SND, dan SMC.
+      </p>
+
+    </article>
+
+
+    <article class="framework-card reveal delay2">
+
+      <b>03</b>
+
+      <strong>↗</strong>
+
+      <h3>Risk Discipline</h3>
+
+      <p>
+        RR, position sizing, invalidation, dan eksekusi tanpa overtrade.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     COMMUNITY PROOF
+========================= -->
+
+<section class="section proof-intro">
+
+  <div class="kicker reveal">
+    03 / COMMUNITY PROOF
+  </div>
+
+  <div class="proof-banner reveal">
+
+    <div>
+
+      <p class="eyebrow">
+        <span></span>
+        REAL DISCUSSION · REAL PROCESS
+      </p>
+
+      <h2>
+        Bukan sekadar call.<br>
+        <em>Bangun cara berpikir.</em>
+      </h2>
+
+    </div>
+
+    <img
+      src="logo.jpg"
+      alt="Syntax Opinion"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section
+  class="section testimonials"
+  id="testimonials"
+>
+
+  <div class="kicker reveal">
+    04 / TESTIMONIALS
+  </div>
+
+
+  <div class="testimonials-head reveal">
+
+    <h2>
+      Inside the<br>
+      <em>community.</em>
+    </h2>
+
+    <p>
+      Dokumentasi diskusi, outlook, analisis, dan hasil pembelajaran dari grup. Ditampilkan sebagai dokumentasi komunitas, bukan jaminan hasil trading.
+    </p>
+
+  </div>
+
+
+  <div class="testimonial-grid">
+
+
+    <!-- TESTIMONIAL 01 -->
+
+    <article
+      class="testimonial-card reveal"
+      data-image="testimonial-01.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-01.jpg"
+          alt="Dokumentasi komunitas 1"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          01
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>01</span>
+        <b>Outlook & Technical Context</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 02 -->
+
+    <article
+      class="testimonial-card reveal delay"
+      data-image="testimonial-02.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-02.jpg"
+          alt="Dokumentasi komunitas 2"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          02
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>02</span>
+        <b>Global Market & Fundamental</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 03 -->
+
+    <article
+      class="testimonial-card reveal"
+      data-image="testimonial-03.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-03.jpg"
+          alt="Dokumentasi komunitas 3"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          03
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>03</span>
+        <b>Geopolitics & Monetary Context</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 04 -->
+
+    <article
+      class="testimonial-card reveal delay"
+      data-image="testimonial-04.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-04.jpg"
+          alt="Dokumentasi komunitas 4"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          04
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>04</span>
+        <b>DXY Structure & Gold Context</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 05 -->
+
+    <article
+      class="testimonial-card reveal"
+      data-image="testimonial-05.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-05.jpg"
+          alt="Dokumentasi komunitas 5"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          05
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>05</span>
+        <b>Multi-Timeframe Analysis</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 06 -->
+
+    <article
+      class="testimonial-card reveal delay"
+      data-image="testimonial-06.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-06.jpg"
+          alt="Dokumentasi komunitas 6"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          06
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>06</span>
+        <b>Fundamental Update</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 07 -->
+
+    <article
+      class="testimonial-card reveal"
+      data-image="testimonial-07.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-07.jpg"
+          alt="Dokumentasi komunitas 7"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          07
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>07</span>
+        <b>Trade Execution</b>
+      </div>
+
+    </article>
+
+
+    <!-- TESTIMONIAL 08 -->
+
+    <article
+      class="testimonial-card reveal delay"
+      data-image="testimonial-08.jpg"
+    >
+
+      <div class="testimonial-image">
+
+        <img
+          src="testimonial-08.jpg"
+          alt="Dokumentasi komunitas 8"
+          loading="lazy"
+        >
+
+        <div class="image-number">
+          08
+        </div>
+
+        <div class="image-overlay">
+          VIEW IMAGE ↗
+        </div>
+
+      </div>
+
+      <div class="card-meta">
+        <span>08</span>
+        <b>Geopolitical Market Update</b>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     JOIN
+========================= -->
+
+<section class="section join" id="join">
+
+  <div class="join-box reveal">
+
+    <div>
+
+      <p class="eyebrow">
+        <span></span>
+        SYNTAX OPINION CAPITAL
+      </p>
+
+      <h2>
+        Build your edge.<br>
+        <em>Not your hype.</em>
+      </h2>
+
+      <p>
+        Masuk ke komunitas dan pelajari proses analisis yang lebih terstruktur — fundamental, technical, geopolitics, dan risk management dalam satu framework.
+      </p>
+
+      <a
+        class="btn light large"
+        href="#"
+        onclick="return false;"
+      >
+        Join Syntax Opinion ↗
+      </a>
+
+      <small>
+        Ganti link tombol dengan link grup/WhatsApp/Telegram Anda.
+      </small>
+
+    </div>
+
+
+    <img
+      class="join-logo"
+      src="logo.jpg"
+      alt="Syntax Opinion Capital"
+    >
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FLOATING JOIN
+========================= -->
+
+<a
+  class="join-float"
+  href="#join"
+>
+  JOIN SYNTAX OPINION
+  <b>↗</b>
+</a>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+>
+
+  <button
+    id="lightboxClose"
+    aria-label="Close"
+  >
+    ×
+  </button>
+
+  <img
+    id="lightboxImg"
+    alt="Testimonial"
+  >
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <span>
+    SYNTAX OPINION CAPITAL
+  </span>
+
+  <span>
+    NO ERROR. ONLY TRUE CODE.
+  </span>
+
+  <span>
+    © 2026
+  </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
