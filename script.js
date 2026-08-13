@@ -1,121 +1,164 @@
-const menu = document.getElementById('menuBtn'),
-      drawer = document.getElementById('drawer'),
-      backdrop = document.getElementById('backdrop');
+/* =========================
+   MOBILE MENU
+========================= */
 
-function toggle(open) {
-  drawer.classList.toggle('open', open);
-  backdrop.classList.toggle('show', open);
-  menu.setAttribute('aria-expanded', open);
+const menu = document.getElementById("menuBtn");
+const drawer = document.getElementById("drawer");
+const backdrop = document.getElementById("backdrop");
+const closeBtn = document.getElementById("closeBtn");
+
+function toggleMenu(open) {
+
+  drawer.classList.toggle("open", open);
+  backdrop.classList.toggle("show", open);
+
+  menu.setAttribute(
+    "aria-expanded",
+    open ? "true" : "false"
+  );
 }
 
-menu.addEventListener('click', () => toggle(!drawer.classList.contains('open')));
+menu.addEventListener("click", () => {
 
-document.getElementById('closeBtn').onclick = () => toggle(false);
+  const isOpen = drawer.classList.contains("open");
 
-backdrop.onclick = () => toggle(false);
+  toggleMenu(!isOpen);
 
-document.querySelectorAll('.drawer a').forEach(a => {
-  a.onclick = () => toggle(false);
+});
+
+closeBtn.addEventListener("click", () => {
+  toggleMenu(false);
+});
+
+backdrop.addEventListener("click", () => {
+  toggleMenu(false);
+});
+
+
+document.querySelectorAll(".drawer a").forEach(link => {
+
+  link.addEventListener("click", () => {
+    toggleMenu(false);
+  });
+
 });
 
 
 /* =========================
-   TESTIMONIAL / COMMUNITY
-   ========================= */
+   SCROLL REVEAL
+========================= */
 
-const titles = [
-  'Outlook & Technical Context',
-  'Global Market & Fundamental',
-  'Geopolitics & Monetary Context',
-  'DXY Structure & Gold Context',
-  'Multi-Timeframe Analysis',
-  'Fundamental Update',
-  'Trade Execution',
-  'Geopolitical Market Update'
-];
+const observer = new IntersectionObserver(
 
-const grid = document.getElementById('testimonialGrid');
+  entries => {
 
-grid.innerHTML = titles.map((t, i) => `
-  <article class="testimonial-card reveal">
+    entries.forEach(entry => {
 
-    <div class="watermark">
-      <img src="logo.jpg" alt="Syntax Opinion">
-    </div>
+      if (entry.isIntersecting) {
 
-    <img
-      class="proof-img"
-      src="testimonial-${String(i + 1).padStart(2, '0')}.jpg"
-      alt="Dokumentasi komunitas ${i + 1}"
-      loading="lazy"
-    >
+        entry.target.classList.add("visible");
 
-    <div class="card-meta">
-      <span>${String(i + 1).padStart(2, '0')}</span>
-      <b>${t}</b>
-    </div>
+        observer.unobserve(entry.target);
 
-  </article>
-`).join('');
+      }
+
+    });
+
+  },
+
+  {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px"
+  }
+
+);
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(element => {
+
+    observer.observe(element);
+
+  });
 
 
 /* =========================
-   SCROLL REVEAL ANIMATION
-   ========================= */
+   TESTIMONIAL LIGHTBOX
+========================= */
 
-const io = new IntersectionObserver(
-  es => es.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
+const lightbox =
+  document.getElementById("lightbox");
+
+const lightboxImg =
+  document.getElementById("lightboxImg");
+
+const lightboxClose =
+  document.getElementById("lightboxClose");
+
+
+document
+  .querySelectorAll(".testimonial-card")
+  .forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      const image =
+        card.getAttribute("data-image");
+
+      lightboxImg.src = image;
+
+      lightbox.classList.add("open");
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+  });
+
+
+function closeLightbox() {
+
+  lightbox.classList.remove("open");
+
+  document.body.style.overflow = "";
+
+}
+
+
+lightboxClose.addEventListener(
+  "click",
+  closeLightbox
+);
+
+
+lightbox.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === lightbox) {
+      closeLightbox();
     }
-  }),
-  {
-    threshold: 0.12,
-    rootMargin: '0px 0px -35px'
+
   }
 );
 
-document.querySelectorAll('.reveal').forEach(x => io.observe(x));
-
 
 /* =========================
-   LIGHTBOX
-   ========================= */
+   ESC KEY
+========================= */
 
-const lb = document.getElementById('lightbox'),
-      li = document.getElementById('lightboxImg');
+document.addEventListener(
+  "keydown",
+  event => {
 
-document.addEventListener('click', e => {
+    if (event.key === "Escape") {
 
-  if (e.target.classList.contains('proof-img')) {
+      toggleMenu(false);
 
-    li.src = e.target.src;
+      closeLightbox();
 
-    lb.classList.add('open');
-  }
-
-});
-
-document.getElementById('lightboxClose').onclick = () => {
-  lb.classList.remove('open');
-};
-
-lb.onclick = e => {
-
-  if (e.target === lb) {
-    lb.classList.remove('open');
-  }
-
-};
-
-document.addEventListener('keydown', e => {
-
-  if (e.key === 'Escape') {
-
-    lb.classList.remove('open');
-
-    toggle(false);
+    }
 
   }
-
-});
+);
